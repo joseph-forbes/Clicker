@@ -10,7 +10,7 @@ let pendingClicks = localClicks.pending;
 let button = document.getElementById("clicker-button");
 let clickCount = document.getElementById("click-count");
 
-const backendUrl = 'http://clicker-backend-production-becd.up.railway.app'; 
+const backendUrl = 'https://clicker-backend-production-becd.up.railway.app'; 
 
 button.onclick = async function () {
   pendingClicks++;
@@ -53,4 +53,5 @@ async function updateTotal() {
 }
 
 updateTotal(); // initialize global total on page load
+
 setInterval(updateTotal, 10000); // update every 5 seconds
